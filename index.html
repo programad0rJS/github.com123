@@ -1,0 +1,23 @@
+<html>
+
+  <head>
+    <title>Curso de Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 v-once>
+        {{ titulo }}
+      </h1>
+      <p>
+        {{ mostrarTitulo() }}
+      </p>
+      <p v-html="enlaceHTML">
+      </p>
+      <input type="text" v-model="inicialContador" @keyup.enter="cambiarContador">
+      <button @click="aumentarCongador">Sumar +1</button>
+      <p>{{ contador }}</p>
+    </div>
+  </body>   
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="app.js"></script>
+</html>
